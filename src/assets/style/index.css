@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.w-60-px {
+  width: 60px;
+}
+.mt-17 {
+  margin-top: 4.5rem;
+}
+/* input:focus-within ~ label {
+  @apply transform scale-75 -translate-y-6 text-blue-500;
+} */
+
+.Iinput:focus-within ~ label,
+.Iinput:not(:placeholder-shown) ~ label {
+  @apply transform scale-75 -translate-y-6;
+}
+
+.Iinput:focus-within ~ label {
+  @apply text-blue-500;
+}
+
+@media (max-width: 450px) {
+  .s\:hidden {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .lgd\:hidden {
+    display: none;
+  }
+}
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+}
+.has-tooltip:hover .tooltip {
+  visibility: visible;
+  z-index: 100;
+}
+.ml-65 {
+  margin-left: 16.5rem;
+}
+
+.toggle-checkbox:checked {
+  @apply: right-0 border-green-400;
+  right: 0;
+  border-color: #68d391;
+}
+.toggle-checkbox:checked + .toggle-label {
+  @apply: bg-green-400;
+  background-color: #68d391;
+}
